@@ -139,7 +139,8 @@ const YoutubeIframe = (props, ref) => {
             onChangeState(PLAYER_STATES[message.data]);
             break;
           case 'playerReady':
-            onReady();
+            const playerInstance = message.data;
+            onReady(playerInstance);
             setPlayerReady(prev => prev + 1);
             if (Array.isArray(playList)) {
               webViewRef.current.injectJavaScript(

@@ -223,7 +223,7 @@ export const MAIN_SCRIPT = (
       }
 
       function onPlayerReady(event) {
-        window.ReactNativeWebView.postMessage(JSON.stringify({eventType: 'playerReady'}))
+        window.ReactNativeWebView.postMessage(JSON.stringify({eventType: 'playerReady', data: player }))
       }
 
       var done = false;
