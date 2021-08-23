@@ -140,6 +140,7 @@ const YoutubeIframe = (props, ref) => {
             break;
           case 'playerReady':
             const playerInstance = message.data;
+            console.log({playerInstance, message});
             onReady(playerInstance);
             setPlayerReady(prev => prev + 1);
             if (Array.isArray(playList)) {
